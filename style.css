@@ -1,0 +1,97 @@
+html,
+body {
+    margin: 0px;
+    height: 100%;
+    font-family: 'Caveat', cursive;
+    font-family: 'Shantell Sans', cursive;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(35, 32, 36);
+}
+
+.hero {
+    display: inline-block;
+    background-color: rgb(58, 53, 56);
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.text {
+    font-size: 0px;
+    color: rgb(197, 174, 218);
+}
+
+.title,
+.titlenum {
+    font-size: 105px;
+    color: rgb(188, 150, 224);
+}
+
+.hero>.titlenum {
+    animation-duration: 1.5s;
+    animation-name: fade;
+}
+
+@keyframes fade {
+    0% {
+        color: rgb(228, 77, 77);
+    }
+
+    20% {
+        color: rgb(221, 247, 128);
+    }
+
+    40% {
+        color: rgb(77, 228, 115);
+    }
+
+    60% {
+        color: rgb(77, 228, 228);
+    }
+
+    80% {
+        color: rgb(193, 77, 228);
+    }
+
+    100% {
+        color: rgb(218, 97, 97);
+    }
+}
+
+.hero:hover>.titlenum {
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        font-size: 105px;
+    }
+
+    to {
+        font-size: 290px;
+    }
+}
+
+.hero:hover>.text {
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-name: showtxt;
+}
+
+@keyframes showtxt {
+    from {
+        font-size: 0px;
+    }
+
+    to {
+        font-size: 25px;
+    }
+}
